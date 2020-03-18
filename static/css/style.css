@@ -1,0 +1,11 @@
+.block_parodie {
+    max-width: 700px;
+    height: 500px;
+    background: grey;
+    display: flex;
+    margin: 0 auto;
+}
+
+.body {
+    background: red;
+}
