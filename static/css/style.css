@@ -1,11 +1,26 @@
-.block_parodie {
-    max-width: 700px;
-    height: 500px;
-    background: grey;
-    display: flex;
-    margin: 0 auto;
+.regis {
+    width: 500px;
+    height: 1100px;
+    margin: auto;
+    background-color: white;
+    margin-top: 5%;
+    padding-left: 80px;
 }
 
-.body {
-    background: red;
+.two {
+    margin-top: 5%;
+}
+
+
+.form-control {
+    width: 341px;
+    margin-right: 120px;
+}
+
+.niga {
+    color-adjust: exact;
+}
+
+.bod {
+    background-color: #F4F4F4;
 }
