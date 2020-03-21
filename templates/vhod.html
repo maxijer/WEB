@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Пример формы</title>
+</head>
+<body>
+<body class="bod">
+<div class="log">
+<form method="post">
+    <div action="" method="post" novalidate style="width: 900px; display: block; margin: auto"
+         class="ma">
+        {{ form.hidden_tag() }}
+        {% for error in form.email.errors %}
+        <div class="alert alert-danger" role="alert" style="width: 350px;margin-right: auto;">
+            {{ error }}
+        </div>
+        {% endfor %}
+        <div class="two">
+            <h4 class="one" style="margin: auto;padding-top: 100px;">Форма Авторизации</h4>
+            <div style="height: 20px;"></div>
+            <div style="height: 20px;"></div>
+            <h6 style="margin: auto" class="niga">Email</h6>
+            <div style="height: 20px;"></div>
+            {{ form.email(class="form-control") }}<br>
+            <div style="height: 20px;"></div>
+            <h6 style="margin: auto" class="niga">Пароль</h6>
+            <div style="height: 20px;"></div>
+            {{ form.password(class="form-control", type="password") }}<br>
+        </div>
+        <p class="mastera">
+            <p class="se">{{ form.submit(type="submit", class="btn btn-primary", style="width: 350px;") }}</p>
+            <p class="se">{{ form.regist(type="regist", class="btn btn-primary", style="width: 350px;") }}</p>
+        </div>
+    </div>
+</form>
+</div>
+</body>
+</html>

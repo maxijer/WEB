@@ -9,12 +9,47 @@
 
 .two {
     margin-top: 5%;
+    height: 400px;
 }
 
+.knopki {
+    display: inline-block;
+}
+
+.mastera {
+    display: inline-block;
+    width: 100px;
+}
+
+.se {
+    width: 400px;
+}
+
+.log {
+    width: 500px;
+    height: 550px;
+    margin: auto;
+    background-color: white;
+    margin-top: 5%;
+    padding-left: 80px;
+}
+
+.govno {
+    width: 700px;
+    height: 100px;
+    margin: auto;
+    background-color: white;
+    margin-top: 5%;
+    padding-left: 100px;
+}
 
 .form-control {
     width: 341px;
     margin-right: 120px;
+}
+
+.for_vhod {
+    width: 400px;
 }
 
 .niga {

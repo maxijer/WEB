@@ -19,9 +19,17 @@ class RegistrationForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
+class LoginForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    password = PasswordField('Пароль', validators=[DataRequired()])
+    submit = SubmitField('Вход')
+    regist = SubmitField('Регистрация')
+
+
 @app.route('/')
 def rabota():
-    return render_template('base1.html')
+    form = LoginForm()
+    return render_template('base1.html', title='Авторизация', form=form)
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -56,6 +64,12 @@ def register():
             else:
                 return "ВЫ допустили ошибку"
     return render_template('login.html', title='Авторизация', form=form)
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    return render_template('vhod.html', form=form)
 
 
 if __name__ == '__main__':
