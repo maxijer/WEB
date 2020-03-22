@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
 
     <!-- Optional theme -->
     <link rel="stylesheet"
@@ -17,67 +18,59 @@
           crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Навигация</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Олимпиус</a>
-        </div>
+<div>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Навигация</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Олимпиус</a>
+            </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Добавить</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Физика<b
-                            class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Олимпиады</a></li>
-                        <li><a href="#">Задачник</a></li>
-                    </ul>
-                </li>
-            </ul>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Информатика<b
-                            class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Олимпиады</a></li>
-                        <li><a href="#">Задачник</a></li>
-                    </ul>
-                </li>
-            </ul>
                 <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Математика<b
-                            class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Олимпиады</a></li>
-                        <li><a href="#">Задачник</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Дополнительно<b
-                            class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Выйти</a></li>
-                    </ul>
-                </li>
-            </ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Добавить</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Физика<b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Олимпиады</a></li>
+                            <li><a href="#">Задачник</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Информатика<b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Олимпиады</a></li>
+                            <li><a href="#">Задачник</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Математика<b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Олимпиады</a></li>
+                            <li><a href="#">Задачник</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Дополнительно<b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Выйти</a></li>
+                        </ul>
+                </ul>
+            </div>
         </div>
-    </div>
 </nav>
-
-
+{% block content %}{% endblock %}
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->

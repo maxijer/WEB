@@ -6,6 +6,8 @@ from data.users import User
 from data import db_session
 import hashlib
 
+name_and_surname = ''
+
 app = Flask(__name__)
 
 
@@ -19,6 +21,16 @@ class RegistrationForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
+class Dobavlenie(FlaskForm):
+    about = StringField('about', validators=[DataRequired(), Email()])
+    content = StringField('about', validators=[DataRequired()])
+    fiz = BooleanField('Физика')
+    math = BooleanField('Математика')
+    informatick = BooleanField('Информатика')
+    news = BooleanField('Новость')
+    submit = SubmitField('Добавить')
+
+
 class LoginForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Пароль', validators=[DataRequired()])
@@ -26,7 +38,13 @@ class LoginForm(FlaskForm):
     regist = SubmitField('Регистрация')
 
 
-@app.route('/')
+@app.route("/")
+def dobavim():
+    form = Dobavlenie()
+    return render_template("dobavlenie.html", form=form)
+
+
+@app.route('/1')
 def rabota():
     form = LoginForm()
     return render_template('base1.html', title='Авторизация', form=form)
@@ -42,9 +60,6 @@ def register():
         surname = request.form.get('surname')
         name = request.form.get('name')
         age = request.form.get('age')
-        print(pasword)
-        print(Repeat_password)
-        print(email.errors)
         if pasword == Repeat_password:
             user = User()
             user.name = name
@@ -69,9 +84,11 @@ def register():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
+    if form["regist"].is_submitted():
+        return redirect('/register')
     return render_template('vhod.html', form=form)
 
 
 if __name__ == '__main__':
     app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
-    app.run(host='127.0.0.1', port=8080)
+    app.run(host='0.0.0.0', port=8080)

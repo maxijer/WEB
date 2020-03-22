@@ -9,35 +9,35 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <title>Пример формы</title>
 </head>
-<body>
 <body class="bod">
-<div class="log">
-<form method="post">
-    <div action="" method="post" novalidate style="width: 900px; display: block; margin: auto"
-         class="ma">
-        {{ form.hidden_tag() }}
-        {% for error in form.email.errors %}
-        <div class="alert alert-danger" role="alert" style="width: 350px;margin-right: auto;">
-            {{ error }}
+{% extends "base1.html" %}
+
+{% block content %}
+<div class="bozhestw">
+    <form method="post">
+        <div action="" method="post" novalidate style="width: 900px; display: block; margin: auto"
+             class="topovie">
         </div>
-        {% endfor %}
         <div class="two">
-            <h4 class="one" style="margin: auto;padding-top: 100px;">Форма Авторизации</h4>
+            <h4 class="one" style="margin: auto;padding-top: 100px;">
+                {{form.about(class="form-control")}}</h4>
             <div style="height: 20px;"></div>
             <div style="height: 20px;"></div>
             <h6 style="margin: auto" class="niga">Email</h6>
             <div style="height: 20px;"></div>
-            {{ form.email(class="form-control") }}<br>
+            {{form.content(class="form-control")}}<br>
             <div style="height: 20px;"></div>
             <h6 style="margin: auto" class="niga">Пароль</h6>
             <div style="height: 20px;"></div>
-            {{ form.password(class="form-control", type="password") }}<br>
+            <h6>{{ form.fiz() }} {{ form.fiz.label }}</h6>
+            <h6>{{ form.math() }} {{ form.math.label }}</h6>
+            <h6>{{ form.informatick() }} {{ form.informatick.label }}</h6>
+            <h6>{{ form.news() }} {{ form.news.label }}</h6>
         </div>
         <p class="mastera">
-            <p class="se">{{ form.submit(type="submit", class="btn btn-primary", style="width: 350px;") }}</p>
-            <p class="se">{{ form.regist(type="submit", class="btn btn-primary", style="width: 350px;") }}</p>
-        </div>
-    </div>
+        <p class="se">{{ form.submit(type="submit", class="btn btn-primary", style="width: 350px;")
+            }}</p>
+{% endblock %}
 </form>
 </div>
 </body>
