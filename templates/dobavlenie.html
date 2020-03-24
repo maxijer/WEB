@@ -7,38 +7,37 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <title>Пример формы</title>
 </head>
 <body class="bod">
-{% extends "base1.html" %}
-
-{% block content %}
 <div class="bozhestw">
     <form method="post">
         <div action="" method="post" novalidate style="width: 900px; display: block; margin: auto"
              class="topovie">
+            <div class="two">
+                <div style="height: 15px;"></div>
+                <h6 style="padding-top: 5px;">Заголовок</h6>
+                <h4 class="one" style="margin: auto">
+                    {{form.about(class="form-control", style="width: 360px;")}}</h4>
+                <div style="height: 20px;"></div>
+                <h6>Информация</h6>
+                <div style="width: 10px;"></div>
+                {{form.content(class="form-control", style="width: 360px;height: 100px;")}}<br>
+                <div style="height: 5px;"></div>
+                <h6>{{ form.fiz() }} {{ form.fiz.label }}</h6>
+                <h6>{{ form.math() }} {{ form.math.label }}</h6>
+                <h6>{{ form.informatick() }} {{ form.informatick.label }}</h6>
+                <h6>{{ form.news() }} {{ form.news.label }}</h6>
+            </div>
+            <div style="height: 10px;"></div>
+            {{form.photo()}}
+            <div style="height: 5px;"></div>
+            <p class="mastera">
+            <p class="se">{{ form.submit(type="submit", class="btn btn-primary", style="width: 360px;")
+                }}</p>
         </div>
-        <div class="two">
-            <h4 class="one" style="margin: auto;padding-top: 100px;">
-                {{form.about(class="form-control")}}</h4>
-            <div style="height: 20px;"></div>
-            <div style="height: 20px;"></div>
-            <h6 style="margin: auto" class="niga">Email</h6>
-            <div style="height: 20px;"></div>
-            {{form.content(class="form-control")}}<br>
-            <div style="height: 20px;"></div>
-            <h6 style="margin: auto" class="niga">Пароль</h6>
-            <div style="height: 20px;"></div>
-            <h6>{{ form.fiz() }} {{ form.fiz.label }}</h6>
-            <h6>{{ form.math() }} {{ form.math.label }}</h6>
-            <h6>{{ form.informatick() }} {{ form.informatick.label }}</h6>
-            <h6>{{ form.news() }} {{ form.news.label }}</h6>
-        </div>
-        <p class="mastera">
-        <p class="se">{{ form.submit(type="submit", class="btn btn-primary", style="width: 350px;")
-            }}</p>
-{% endblock %}
-</form>
+    </form>
 </div>
 </body>
 </html>

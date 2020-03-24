@@ -1,15 +1,22 @@
 .regis {
     width: 500px;
-    height: 1100px;
+    height: 900px;
     margin: auto;
     background-color: white;
     margin-top: 5%;
     padding-left: 80px;
+    border-radius: 20px;
+}
+
+.three {
+    margin-top: 5%;
+    height: 310px;
 }
 
 .two {
     margin-top: 5%;
-    height: 400px;
+    height: 390px;
+    border-radius: 20px;
 }
 
 .knopki {
@@ -34,18 +41,30 @@
     height: 550px;
     margin: auto;
     background-color: white;
-    margin-top: 50%;
+    margin-top: 5%;
+    padding-left: 40px;
+    border-radius: 20px;
+}
+
+
+.loginer {
+    width: 450px;
+    height: 450px;
+    margin: auto;
+    background-color: white;
+    margin-top: 5%;
     padding-left: 40px;
     border-radius: 20px;
 }
 
 .log {
-    width: 500px;
+    width: 450px;
     height: 550px;
     margin: auto;
     background-color: white;
     margin-top: 5%;
     padding-left: 80px;
+    border-radius: 20px;
 }
 
 .bozhestw {
@@ -70,9 +89,6 @@
     width: 400px;
 }
 
-.niga {
-    color-adjust: exact;
-}
 
 .bod {
     background-color: #F4F4F4;
