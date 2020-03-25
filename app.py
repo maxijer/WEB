@@ -3,8 +3,10 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, FileField
 from wtforms.validators import DataRequired, Email
 from data.users import User
+from data.zadachi import Zadacha
 from data import db_session
 import hashlib
+from werkzeug.utils import secure_filename
 
 name_and_surname = ''
 
@@ -39,15 +41,35 @@ class LoginForm(FlaskForm):
     regist = SubmitField('Регистрация')
 
 
+def zadach_ses(about, content, image=None):
+    db_session.global_init("db/olymp.sqlite")
+    session = db_session.create_session()
+    zad = Zadacha()
+    zad.about = about
+    zad.zadacha = content
+    if not image is None:
+        zad.image = image
+    session.add(zad)
+    session.commit()
+
+
 @app.route("/dobav", methods=['GET', 'POST'])
 def dobavim():
     form = Dobavlenie()
-    print(1)
-    print(form.submit.data)
-    if request.method == 'POST':
-        if form.validate_on_submit():
-            print(form.photo.data)
-            print(form.fiz.data)
+    if request.method == "GET":
+        return render_template("dobavlenie.html", form=form)
+    elif request.method == "POST":
+        if form.submit.data:
+            about = request.form.get('about')
+            content = request.form.get('content')
+            if form.fiz.data:
+                pass
+            if form.math.data:
+                pass
+            if form.math.data:
+                pass
+            if form.news.data:
+                pass
             return "Всё ок"
     return render_template("dobavlenie.html", form=form)
 
@@ -83,15 +105,19 @@ def register():
             if count == 0:
                 session.add(user)
                 session.commit()
-                return "Всё добавленно"
-            else:
-                return "ВЫ допустили ошибку"
+                return redirect('/login')
     return render_template('login.html', title='Авторизация', form=form)
 
 
+@app.route('/', methods=['GET', 'POST'])
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
+    if request.method == "GET":
+        return render_template("vhod.html", form=form)
+    elif request.method == 'POST':
+        if form.regist.data:
+            return redirect('/register')
     return render_template('vhod.html', form=form)
 
 
