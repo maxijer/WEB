@@ -9,5 +9,5 @@ class Zadacha(SqlAlchemyBase):
                            primary_key=True, autoincrement=True)
     chel = sqlalchemy.Column(sqlalchemy.String)
     zadacha = sqlalchemy.Column(sqlalchemy.String)
-    data = sqlalchemy.Column(sqlalchemy.String)
+    predmet = sqlalchemy.Column(sqlalchemy.String)
     clas = sqlalchemy.Column(sqlalchemy.String)
