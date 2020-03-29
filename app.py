@@ -155,6 +155,8 @@ def dobavim():
                 return render_template("dobavlenie.html", form=form, gad=0)
             elif spi.count(2) > 0:
                 return render_template("dobavlenie.html", form=form, gad=2)
+            else:
+                return redirect('/news')
         return render_template("dobavlenie.html", form=form, gad=1)
 
 
@@ -175,6 +177,38 @@ def news():
         spi.append(z)
         print(spi)
     return render_template('news.html', news_list=spi)
+
+
+def otobrazh(predmet):
+    db_session.global_init("db/olymp.sqlite")
+    session = db_session.create_session()
+    spi = list()
+    for mast in reversed(list(session.query(Zadacha).filter(Zadacha.predmet == predmet))):
+        z = list()
+        z.append(mast.about)
+        print(norm_pokaz(mast.zadacha))
+        z.append(mast.zadacha)
+        if mast.image is None:
+            z.append('0')
+        else:
+            z.append(mast.image)
+        spi.append(z)
+    return spi
+
+
+@app.route('/fizika')
+def fizika():
+    return render_template('zadachka.html', zadacha_list=otobrazh('Физика'))
+
+
+@app.route('/inform')
+def informa():
+    return render_template('zadachka.html', zadacha_list=otobrazh('Информатика'))
+
+
+@app.route('/math')
+def math():
+    return render_template('zadachka.html', zadacha_list=otobrazh('Математика'))
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -233,4 +267,4 @@ def login():
 
 if __name__ == '__main__':
     app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='127.0.0.1', port=8080)
