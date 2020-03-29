@@ -7,6 +7,7 @@ from data.zadachi import Zadacha
 from data.jobs import Jobs
 from data import db_session
 import hashlib
+from PIL import Image
 
 name_and_surname = ''
 norm_rashir = ['jpg', 'png', 'jpeg']
@@ -40,6 +41,24 @@ class LoginForm(FlaskForm):
     password = PasswordField('Пароль', validators=[DataRequired()])
     submit = SubmitField('Вход')
     regist = SubmitField('Регистрация')
+
+
+def resize(path):
+    img = Image.open(path)
+    img.thumbnail((600, 200), Image.ANTIALIAS)
+    img.save(path)
+
+
+def norm_pokaz(content):
+    spi = list()
+    for i in content.split():
+        new = ''
+        if len(new) + len(i) + 1 < 120:
+            new += " " + i
+        else:
+            spi.append(new)
+            new = ''
+    return spi
 
 
 def zadach_ses(about, content, predmet, image=None):
@@ -79,6 +98,7 @@ def obrabotka_zadach(form, predmet, about, content):
             nazv = f'static/img/{predmet}_{about}.{ras}'
             with open(nazv, 'wb') as file:
                 file.write(image)
+            resize(nazv)
             zadach_ses(about, content, predmet, nazv)
     else:
         if not proverka_zagolovka(predmet, about):
@@ -100,6 +120,9 @@ def dobavim():
             content = request.form.get('content')
             if len(about) > 50:
                 return render_template("dobavlenie.html", form=form, gad=3)
+            for i in content.split():
+                if len(i) > 30:
+                    return render_template("dobavlenie.html", form=form, gad=4)
             if form.fiz.data:
                 spi.append(obrabotka_zadach(form, "Физика", about, content))
             if form.math.data:
@@ -121,6 +144,7 @@ def dobavim():
                         nazv = f'static/img/Новость_{about}.{ras}'
                         with open(nazv, 'wb') as file:
                             file.write(image)
+                        resize(nazv)
                         zad.image = nazv
                         session.add(zad)
                         session.commit()
@@ -142,6 +166,7 @@ def news():
     for lud in reversed(session.query(Jobs).all()):
         z = list()
         z.append(lud.about)
+        print(norm_pokaz(lud.news))
         z.append(lud.news)
         if lud.image is None:
             z.append('0')
@@ -208,4 +233,4 @@ def login():
 
 if __name__ == '__main__':
     app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
-    app.run(host='127.0.0.1', port=8080)
+    app.run(host='0.0.0.0', port=8080)
