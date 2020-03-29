@@ -11,5 +11,4 @@ class Jobs(SqlAlchemyBase):
     chel = sqlalchemy.Column(sqlalchemy.String)
     news = sqlalchemy.Column(sqlalchemy.String)
     about = sqlalchemy.Column(sqlalchemy.String)
-    data = sqlalchemy.Column(sqlalchemy.String)
     image = sqlalchemy.Column(sqlalchemy.String)

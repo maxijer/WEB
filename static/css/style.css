@@ -36,6 +36,12 @@
     border-radius: 20px;
 }
 
+
+.news {
+    border-radius: 20px;
+    width: 1000px;
+}
+
 .bozhestw {
     width: 450px;
     height: 550px;
@@ -70,6 +76,7 @@
 .bozhestw {
     border-radius: 20px;
 }
+
 
 .govno {
     width: 700px;
