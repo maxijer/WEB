@@ -11,4 +11,5 @@ class Olymp(SqlAlchemyBase):
     nazv = sqlalchemy.Column(sqlalchemy.String)
     information = sqlalchemy.Column(sqlalchemy.String)
     ssilka = sqlalchemy.Column(sqlalchemy.String)
-    ataps = sqlalchemy.ColumnDefault(sqlalchemy.String)
+    image = sqlalchemy.Column(sqlalchemy.String)
+    predmet = sqlalchemy.Column(sqlalchemy.String)

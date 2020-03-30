@@ -5,6 +5,7 @@ from wtforms.validators import DataRequired, Email
 from data.users import User
 from data.zadachi import Zadacha
 from data.jobs import Jobs
+from data.olymp import Olymp
 from data import db_session
 import hashlib
 from PIL import Image
@@ -123,6 +124,8 @@ def dobavim():
             for i in content.split():
                 if len(i) > 30:
                     return render_template("dobavlenie.html", form=form, gad=4)
+            if len(content) > 540:
+                return render_template("dobavlenie.html", form=form, gad=5)
             if form.fiz.data:
                 spi.append(obrabotka_zadach(form, "Физика", about, content))
             if form.math.data:
@@ -196,9 +199,45 @@ def otobrazh(predmet):
     return spi
 
 
+def obrabotka_olymp(predmet):
+    db_session.global_init("db/olymp.sqlite")
+    session = db_session.create_session()
+    spi = list()
+    for olymp in session.query(Olymp).filter(Olymp.predmet == predmet):
+        z = list()
+        z.append(olymp.nazv)
+        z.append(olymp.information)
+        if olymp.image is None:
+            z.append('0')
+        else:
+            z.append(f'/static/img/{olymp.image}')
+        z.append(olymp.ssilka)
+        spi.append(z)
+        print(spi)
+    return spi
+
+
 @app.route('/fizika')
 def fizika():
     return render_template('zadachka.html', zadacha_list=otobrazh('Физика'))
+
+
+@app.route('/fiz_olimp')
+def fiz_olimp():
+    ol = obrabotka_olymp('Физика')
+    return render_template('olimpiada.html', olymp_list=ol)
+
+
+@app.route('/math_olimp')
+def math_olimp():
+    ol = obrabotka_olymp('Математика')
+    return render_template('olimpiada.html', olymp_list=ol)
+
+
+@app.route('/inform_olimp')
+def inform_olimp():
+    ol = obrabotka_olymp('Информатика')
+    return render_template('olimpiada.html', olymp_list=ol)
 
 
 @app.route('/inform')
@@ -267,4 +306,4 @@ def login():
 
 if __name__ == '__main__':
     app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
-    app.run(host='127.0.0.1', port=8080)
+    app.run(host='0.0.0.0', port=8080)
