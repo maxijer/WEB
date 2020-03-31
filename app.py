@@ -12,7 +12,6 @@ import hashlib
 from PIL import Image
 from requests import get
 import news_api
-import olymp_api
 
 name_and_surname = ''
 norm_rashir = ['jpg', 'png', 'jpeg']
@@ -28,7 +27,7 @@ class RegistrationForm(FlaskForm):
     surname = StringField('surname', validators=[DataRequired()])
     name = StringField('name', validators=[DataRequired()])
     age = StringField('age', validators=[DataRequired()])
-    submit = SubmitField('Submit')
+    submit = SubmitField('Зарегистрироваться')
 
 
 class Dobavlenie(FlaskForm):

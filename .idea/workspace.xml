@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bc83fa4-87ba-4c6b-9d1d-92497d16a669" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/jobs.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/jobs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/olymp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/olymp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/zadachi.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/zadachi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/olymp.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/db/olymp.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/news.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/361.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/361.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/formula-edinstva.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/formula-edinstva.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/img_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/img_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/moskovskaya-matematicheskaya-olimpiada.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/moskovskaya-matematicheskaya-olimpiada.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/moskovskaya-olimpiada-shkolnikov.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/moskovskaya-olimpiada-shkolnikov.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/nanotech19201.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/nanotech19201.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/olimpiada-shkolnikov-fiztekh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/olimpiada-shkolnikov-fiztekh.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/olimpiada-shkolnikov-lomonosov.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/olimpiada-shkolnikov-lomonosov.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/olimpiada-yunosheskoj-matematicheskoj-shkoly-spbgu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/olimpiada-yunosheskoj-matematicheskoj-shkoly-spbgu.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/turnir-gorodov.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/turnir-gorodov.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/vysshaya-proba.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/vysshaya-proba.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/Городская открытая по физике.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/Городская открытая по физике.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/бельчонок.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/бельчонок.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/всесиб.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/всесиб.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/математика1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/математика1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/надеждаэнергетики.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/надеждаэнергетики.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/саммат.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/саммат.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/технокубок.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/технокубок.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/физика.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/физика.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/one.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/two.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vk_config.v2.json" beforeDir="false" />
-    </list>
+    <list default="true" id="9bc83fa4-87ba-4c6b-9d1d-92497d16a669" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -245,7 +211,7 @@
       <workItem from="1585591425457" duration="238000" />
       <workItem from="1585591738715" duration="1250000" />
       <workItem from="1585593120651" duration="5306000" />
-      <workItem from="1585639929589" duration="20234000" />
+      <workItem from="1585639929589" duration="20522000" />
     </task>
     <servers />
   </component>
@@ -261,22 +227,22 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="419" y="160" key="FileChooserDialogImpl/0.40.1366.728@0.40.1366.728" timestamp="1585566398536" />
-    <state width="1323" height="232" key="GridCell.Tab.0.bottom" timestamp="1585661531101">
+    <state width="1323" height="232" key="GridCell.Tab.0.bottom" timestamp="1585663520184">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="232" key="GridCell.Tab.0.bottom/0.40.1366.728@0.40.1366.728" timestamp="1585661531101" />
-    <state width="1323" height="232" key="GridCell.Tab.0.center" timestamp="1585661531100">
+    <state width="1323" height="232" key="GridCell.Tab.0.bottom/0.40.1366.728@0.40.1366.728" timestamp="1585663520184" />
+    <state width="1323" height="232" key="GridCell.Tab.0.center" timestamp="1585663520183">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="232" key="GridCell.Tab.0.center/0.40.1366.728@0.40.1366.728" timestamp="1585661531100" />
-    <state width="1323" height="232" key="GridCell.Tab.0.left" timestamp="1585661531100">
+    <state width="1323" height="232" key="GridCell.Tab.0.center/0.40.1366.728@0.40.1366.728" timestamp="1585663520183" />
+    <state width="1323" height="232" key="GridCell.Tab.0.left" timestamp="1585663520183">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="232" key="GridCell.Tab.0.left/0.40.1366.728@0.40.1366.728" timestamp="1585661531100" />
-    <state width="1323" height="232" key="GridCell.Tab.0.right" timestamp="1585661531101">
+    <state width="1323" height="232" key="GridCell.Tab.0.left/0.40.1366.728@0.40.1366.728" timestamp="1585663520183" />
+    <state width="1323" height="232" key="GridCell.Tab.0.right" timestamp="1585663520184">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="232" key="GridCell.Tab.0.right/0.40.1366.728@0.40.1366.728" timestamp="1585661531101" />
+    <state width="1323" height="232" key="GridCell.Tab.0.right/0.40.1366.728@0.40.1366.728" timestamp="1585663520184" />
     <state width="1323" height="222" key="GridCell.Tab.1.bottom" timestamp="1585520686448">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
@@ -316,7 +282,7 @@
     <SUITE FILE_PATH="coverage/WEB_projeckt$news_api.coverage" NAME="news_api Coverage Results" MODIFIED="1585660334816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$test.coverage" NAME="test Coverage Results" MODIFIED="1585659349601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Flask$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1584733327989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/WEB_projeckt$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1585661531085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WEB_projeckt$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1585663520168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Flask$app.coverage" NAME="app Coverage Results" MODIFIED="1584639900395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/site-ege" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$olymp.coverage" NAME="olymp Coverage Results" MODIFIED="1585519373800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Flask$form.coverage" NAME="form Coverage Results" MODIFIED="1584703373703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Anaconda3/Lib/site-packages/flask_wtf" />
