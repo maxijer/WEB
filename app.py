@@ -1,19 +1,24 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, jsonify
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, FileField
 from wtforms.validators import DataRequired, Email
 from data.users import User
 from data.zadachi import Zadacha
 from data.jobs import Jobs
+import flask
 from data.olymp import Olymp
 from data import db_session
 import hashlib
 from PIL import Image
+from requests import get
+import news_api
+import olymp_api
 
 name_and_surname = ''
 norm_rashir = ['jpg', 'png', 'jpeg']
 
 app = Flask(__name__)
+
 
 
 class RegistrationForm(FlaskForm):
@@ -171,14 +176,12 @@ def news():
     for lud in reversed(session.query(Jobs).all()):
         z = list()
         z.append(lud.about)
-        print(norm_pokaz(lud.news))
         z.append(lud.news)
         if lud.image is None:
             z.append('0')
         else:
             z.append(lud.image)
         spi.append(z)
-        print(spi)
     return render_template('news.html', news_list=spi)
 
 
@@ -189,7 +192,6 @@ def otobrazh(predmet):
     for mast in reversed(list(session.query(Zadacha).filter(Zadacha.predmet == predmet))):
         z = list()
         z.append(mast.about)
-        print(norm_pokaz(mast.zadacha))
         z.append(mast.zadacha)
         if mast.image is None:
             z.append('0')
@@ -213,7 +215,6 @@ def obrabotka_olymp(predmet):
             z.append(f'/static/img/{olymp.image}')
         z.append(olymp.ssilka)
         spi.append(z)
-        print(spi)
     return spi
 
 
@@ -306,4 +307,6 @@ def login():
 
 if __name__ == '__main__':
     app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
-    app.run(host='127.0.0.1', port=8080)
+    db_session.global_init("db/olymp.sqlite")
+    app.register_blueprint(news_api.blueprint)
+    app.run(host='0.0.0.0', port=8080)
