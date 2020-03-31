@@ -300,7 +300,7 @@ def login():
             return redirect('/register')
         if form.submit.data:
             if check_prav(form.email.data, form.password.data):
-                return redirect('/dobav')
+                return redirect('/news')
     return render_template('vhod.html', form=form)
 
 
@@ -308,4 +308,4 @@ if __name__ == '__main__':
     app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
     db_session.global_init("db/olymp.sqlite")
     app.register_blueprint(news_api.blueprint)
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='127.0.0.1', port=8080)
