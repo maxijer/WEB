@@ -1,6 +1,6 @@
 import requests
 
-dost = requests.get("http://127.0.0.1:8080/api/users").json()
+dost = requests.get("http://6231f063.ngrok.io/api/users").json()
 z = dost['all_zadach']
 vse = ['surname', 'name', 'age', 'email', 'hashed_password']
 for i in range(len(z)):

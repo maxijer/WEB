@@ -1,6 +1,6 @@
 import requests
 
-dost = requests.get("http://127.0.0.1:8080/api/zadachi_math").json()
+dost = requests.get("http://6231f063.ngrok.io/api/zadachi_math").json()
 z = dost['all_zadach']
 vse = ['about', 'zadacha', 'predmet', 'image']
 for i in range(len(z)):

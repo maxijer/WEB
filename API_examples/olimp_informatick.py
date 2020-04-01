@@ -1,6 +1,6 @@
 import requests
 
-dost = requests.get("http://127.0.0.1:8080/api/inform").json()
+dost = requests.get("http://6231f063.ngrok.io/api/inform").json()
 z = dost['all_zadach']
 vse = ['image', 'information', 'nazv', 'predmet', 'ssilka']
 for i in range(len(z)):
