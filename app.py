@@ -19,7 +19,6 @@ norm_rashir = ['jpg', 'png', 'jpeg']
 app = Flask(__name__)
 
 
-
 class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Пароль', validators=[DataRequired()])
@@ -32,12 +31,13 @@ class RegistrationForm(FlaskForm):
 
 class Dobavlenie(FlaskForm):
     about = StringField('about', validators=[DataRequired()])
-    content = StringField('about', validators=[DataRequired()])
+    content = StringField('content', validators=[DataRequired()])
     fiz = BooleanField('Физика')
     math = BooleanField('Математика')
     informatick = BooleanField('Информатика')
     news = BooleanField('Новость')
     photo = FileField("Фото")
+    otvet = StringField('otvet', validators=[DataRequired()])
     submit = SubmitField('Добавить')
 
 
@@ -66,13 +66,14 @@ def norm_pokaz(content):
     return spi
 
 
-def zadach_ses(about, content, predmet, image=None):
+def zadach_ses(about, content, predmet, otvet, image=None):
     db_session.global_init("db/olymp.sqlite")
     session = db_session.create_session()
     zad = Zadacha()
     zad.about = about
     zad.zadacha = content
     zad.predmet = predmet
+    zad.otvet = otvet
     if not image is None:
         zad.image = image
     session.add(zad)
@@ -91,7 +92,7 @@ def proverka_zagolovka(predmet, zagolovok):
     return False
 
 
-def obrabotka_zadach(form, predmet, about, content):
+def obrabotka_zadach(form, predmet, about, content, otvet):
     if form.photo.data != '':
         if not str(form.photo.data).split()[1][1:-1].split('.')[1] in norm_rashir:
             return 0
@@ -104,12 +105,12 @@ def obrabotka_zadach(form, predmet, about, content):
             with open(nazv, 'wb') as file:
                 file.write(image)
             resize(nazv)
-            zadach_ses(about, content, predmet, nazv)
+            zadach_ses(about, content, predmet, nazv, otvet)
     else:
         if not proverka_zagolovka(predmet, about):
             return 2
         else:
-            zadach_ses(about, content, predmet)
+            zadach_ses(about, content, predmet, otvet)
             return 1
 
 
@@ -123,6 +124,7 @@ def dobavim():
         if form.submit.data:
             about = request.form.get('about')
             content = request.form.get('content')
+            otvet = request.form.get('otvet')
             if len(about) > 50:
                 return render_template("dobavlenie.html", form=form, gad=3)
             for i in content.split():
@@ -131,11 +133,11 @@ def dobavim():
             if len(content) > 540:
                 return render_template("dobavlenie.html", form=form, gad=5)
             if form.fiz.data:
-                spi.append(obrabotka_zadach(form, "Физика", about, content))
+                spi.append(obrabotka_zadach(form, "Физика", about, content, otvet))
             if form.math.data:
-                spi.append(obrabotka_zadach(form, "Математика", about, content))
+                spi.append(obrabotka_zadach(form, "Математика", about, content, otvet))
             if form.informatick.data:
-                spi.append(obrabotka_zadach(form, "Информатика", about, content))
+                spi.append(obrabotka_zadach(form, "Информатика", about, content, otvet))
             if form.news.data:
                 db_session.global_init("db/olymp.sqlite")
                 session = db_session.create_session()

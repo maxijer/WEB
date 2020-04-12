@@ -14,3 +14,4 @@ class Zadacha(SqlAlchemyBase, UserMixin, SerializerMixin):
     zadacha = sqlalchemy.Column(sqlalchemy.String)
     predmet = sqlalchemy.Column(sqlalchemy.String)
     image = sqlalchemy.Column(sqlalchemy.String)
+    otvet = sqlalchemy.Column(sqlalchemy.String)
