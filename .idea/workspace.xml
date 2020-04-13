@@ -3,22 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9bc83fa4-87ba-4c6b-9d1d-92497d16a669" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API_examples/fiz_zadachi.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_examples/fiz_zadachi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API_examples/fizika.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_examples/fizika.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API_examples/news.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_examples/news.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API_examples/olimp_informatick.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_examples/olimp_informatick.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API_examples/olimp_math.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_examples/olimp_math.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API_examples/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_examples/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API_examples/vse_olymp.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_examples/vse_olymp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API_examples/vse_zadazh.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_examples/vse_zadazh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API_examples/zadachi_inform.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_examples/zadachi_inform.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API_examples/zadachi_math.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_examples/zadachi_math.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/zadachi.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/zadachi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/olymp.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/db/olymp.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/news_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/razmer.py" beforeDir="false" afterPath="$PROJECT_DIR$/razmer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dobavlenie.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dobavlenie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +46,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python.vk">
     <configuration name="dobavlenie.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WEB_projeckt/templates/dobavlenie.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -83,7 +72,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="news" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="olimp_math" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SQL_Alchemy" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -96,7 +85,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API_examples/news.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API_examples/olimp_math.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -105,7 +94,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="users" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="otvet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SQL_Alchemy" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -118,7 +107,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API_examples/users.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API_examples/otvet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -127,7 +116,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="zadachi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="vk" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SQL_Alchemy" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,12 +124,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/zadachi.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vk.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.vk" />
         <item itemvalue="Python.app" />
+        <item itemvalue="Python.otvet" />
+        <item itemvalue="Python.olimp_math" />
         <item itemvalue="JavaScript Debug.dobavlenie.html" />
-        <item itemvalue="Python.zadachi" />
-        <item itemvalue="Python.users" />
-        <item itemvalue="Python.news" />
       </list>
     </recent_temporary>
   </component>
@@ -211,6 +200,8 @@
       <workItem from="1585591738715" duration="1250000" />
       <workItem from="1585593120651" duration="5306000" />
       <workItem from="1585639929589" duration="23186000" />
+      <workItem from="1586761332041" duration="984000" />
+      <workItem from="1586763416462" duration="12123000" />
     </task>
     <servers />
   </component>
@@ -226,38 +217,38 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="419" y="160" key="FileChooserDialogImpl/0.40.1366.728@0.40.1366.728" timestamp="1585566398536" />
-    <state width="1323" height="232" key="GridCell.Tab.0.bottom" timestamp="1586706759982">
+    <state width="1323" height="232" key="GridCell.Tab.0.bottom" timestamp="1586793115314">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="232" key="GridCell.Tab.0.bottom/0.40.1366.728@0.40.1366.728" timestamp="1586706759982" />
-    <state width="1323" height="232" key="GridCell.Tab.0.center" timestamp="1586706759982">
+    <state width="1323" height="232" key="GridCell.Tab.0.bottom/0.40.1366.728@0.40.1366.728" timestamp="1586793115314" />
+    <state width="1323" height="232" key="GridCell.Tab.0.center" timestamp="1586793115314">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="232" key="GridCell.Tab.0.center/0.40.1366.728@0.40.1366.728" timestamp="1586706759982" />
-    <state width="1323" height="232" key="GridCell.Tab.0.left" timestamp="1586706759981">
+    <state width="1323" height="232" key="GridCell.Tab.0.center/0.40.1366.728@0.40.1366.728" timestamp="1586793115314" />
+    <state width="1323" height="232" key="GridCell.Tab.0.left" timestamp="1586793115314">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="232" key="GridCell.Tab.0.left/0.40.1366.728@0.40.1366.728" timestamp="1586706759981" />
-    <state width="1323" height="232" key="GridCell.Tab.0.right" timestamp="1586706759982">
+    <state width="1323" height="232" key="GridCell.Tab.0.left/0.40.1366.728@0.40.1366.728" timestamp="1586793115314" />
+    <state width="1323" height="232" key="GridCell.Tab.0.right" timestamp="1586793115314">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="232" key="GridCell.Tab.0.right/0.40.1366.728@0.40.1366.728" timestamp="1586706759982" />
-    <state width="1323" height="222" key="GridCell.Tab.1.bottom" timestamp="1585520686448">
+    <state width="1323" height="232" key="GridCell.Tab.0.right/0.40.1366.728@0.40.1366.728" timestamp="1586793115314" />
+    <state width="1323" height="222" key="GridCell.Tab.1.bottom" timestamp="1586791951587">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.1.bottom/0.40.1366.728@0.40.1366.728" timestamp="1585520686448" />
-    <state width="1323" height="222" key="GridCell.Tab.1.center" timestamp="1585520686448">
+    <state width="1323" height="222" key="GridCell.Tab.1.bottom/0.40.1366.728@0.40.1366.728" timestamp="1586791951587" />
+    <state width="1323" height="222" key="GridCell.Tab.1.center" timestamp="1586791951587">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.1.center/0.40.1366.728@0.40.1366.728" timestamp="1585520686448" />
-    <state width="1323" height="222" key="GridCell.Tab.1.left" timestamp="1585520686432">
+    <state width="1323" height="222" key="GridCell.Tab.1.center/0.40.1366.728@0.40.1366.728" timestamp="1586791951587" />
+    <state width="1323" height="222" key="GridCell.Tab.1.left" timestamp="1586791951587">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.1.left/0.40.1366.728@0.40.1366.728" timestamp="1585520686432" />
-    <state width="1323" height="222" key="GridCell.Tab.1.right" timestamp="1585520686448">
+    <state width="1323" height="222" key="GridCell.Tab.1.left/0.40.1366.728@0.40.1366.728" timestamp="1586791951587" />
+    <state width="1323" height="222" key="GridCell.Tab.1.right" timestamp="1586791951587">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state width="1323" height="222" key="GridCell.Tab.1.right/0.40.1366.728@0.40.1366.728" timestamp="1585520686448" />
+    <state width="1323" height="222" key="GridCell.Tab.1.right/0.40.1366.728@0.40.1366.728" timestamp="1586791951587" />
     <state x="53" y="42" width="998" height="708" key="SettingsEditor" timestamp="1585593012976">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
@@ -266,10 +257,10 @@
       <screen x="0" y="40" width="1366" height="728" />
     </state>
     <state x="92" y="132" width="1182" height="539" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.40.1366.728@0.40.1366.728" timestamp="1585648542013" />
-    <state x="379" y="229" key="com.intellij.ide.util.TipDialog" timestamp="1585639985256">
+    <state x="379" y="229" key="com.intellij.ide.util.TipDialog" timestamp="1586763419749">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
-    <state x="379" y="229" key="com.intellij.ide.util.TipDialog/0.40.1366.728@0.40.1366.728" timestamp="1585639985256" />
+    <state x="379" y="229" key="com.intellij.ide.util.TipDialog/0.40.1366.728@0.40.1366.728" timestamp="1586763419749" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1585562676129">
       <screen x="0" y="40" width="1366" height="728" />
     </state>
@@ -277,18 +268,20 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Flask$main.coverage" NAME="main Coverage Results" MODIFIED="1584725902721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/WEB_projeckt$olimp_math.coverage" NAME="olimp_math Coverage Results" MODIFIED="1585665632026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API_examples" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$vse_zadazh.coverage" NAME="vse_zadazh Coverage Results" MODIFIED="1585665978665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API_examples" />
+    <SUITE FILE_PATH="coverage/WEB_projeckt$olimp_math.coverage" NAME="olimp_math Coverage Results" MODIFIED="1586772975423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API_examples" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$fiz_zadachi.coverage" NAME="fiz_zadachi Coverage Results" MODIFIED="1585666027067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API_examples" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$olimp_informatick.coverage" NAME="olimp_informatick Coverage Results" MODIFIED="1585665736142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API_examples" />
     <SUITE FILE_PATH="coverage/Flask$app.coverage" NAME="app Coverage Results" MODIFIED="1584639900395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/site-ege" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$olymp.coverage" NAME="olymp Coverage Results" MODIFIED="1585519373800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/WEB_projeckt$otvet.coverage" NAME="otvet Coverage Results" MODIFIED="1586776141221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API_examples" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$news.coverage" NAME="news Coverage Results" MODIFIED="1585666297478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API_examples" />
-    <SUITE FILE_PATH="coverage/WEB_projeckt$app.coverage" NAME="app Coverage Results" MODIFIED="1586706759927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WEB_projeckt$app.coverage" NAME="app Coverage Results" MODIFIED="1586789376942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$users.coverage" NAME="users Coverage Results" MODIFIED="1585666445944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API_examples" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$zadachi.coverage" NAME="zadachi Coverage Results" MODIFIED="1586694208010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$fizika.coverage" NAME="fizika Coverage Results" MODIFIED="1585665558748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/API_examples" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$news_api.coverage" NAME="news_api Coverage Results" MODIFIED="1585660334816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WEB_projeckt$vk.coverage" NAME="vk Coverage Results" MODIFIED="1586793115298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$test.coverage" NAME="test Coverage Results" MODIFIED="1585659349601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Flask$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1584733327989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WEB_projeckt$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1585665728600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -25,6 +25,18 @@ def ok(sup, cl, chto):
     )
 
 
+@blueprint.route('/api/<predmet>/<zadacha>')
+def pol(predmet, zadacha):
+    session = db_session.create_session()
+    otvet = session.query(Zadacha).filter(Zadacha.predmet == predmet, Zadacha.about == zadacha).first()
+    return jsonify(
+        {
+            'all_zadach':
+                [item.to_dict(only=otvet)
+                 for item in otvet]
+        })
+
+
 @blueprint.route('/api/fizika')
 def fiz():
     return ok('Физика', Olymp, ("nazv", "information", "ssilka", "image", "predmet"))

@@ -31,19 +31,19 @@ class RegistrationForm(FlaskForm):
 
 class Dobavlenie(FlaskForm):
     about = StringField('about', validators=[DataRequired()])
-    content = StringField('content', validators=[DataRequired()])
+    content = StringField('about', validators=[DataRequired()])
     fiz = BooleanField('Физика')
     math = BooleanField('Математика')
     informatick = BooleanField('Информатика')
     news = BooleanField('Новость')
     photo = FileField("Фото")
-    otvet = StringField('otvet', validators=[DataRequired()])
+    otvet = StringField('about')
     submit = SubmitField('Добавить')
 
 
 class LoginForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email()])
-    password = PasswordField('Пароль', validators=[DataRequired()])
+    email = StringField('Email')
+    password = PasswordField('Пароль')
     submit = SubmitField('Вход')
     regist = SubmitField('Регистрация')
 
@@ -93,19 +93,20 @@ def proverka_zagolovka(predmet, zagolovok):
 
 
 def obrabotka_zadach(form, predmet, about, content, otvet):
-    if form.photo.data != '':
+    if str(form.photo.data).split()[1] != "''":
         if not str(form.photo.data).split()[1][1:-1].split('.')[1] in norm_rashir:
             return 0
         elif not proverka_zagolovka(predmet, about):
             return 2
         else:
             ras = str(form.photo.data).split()[1][1:-1].split('.')[1]
+            print(ras)
             image = form.photo.data.read()
             nazv = f'static/img/{predmet}_{about}.{ras}'
             with open(nazv, 'wb') as file:
                 file.write(image)
             resize(nazv)
-            zadach_ses(about, content, predmet, nazv, otvet)
+            zadach_ses(about, content, predmet, otvet, nazv)
     else:
         if not proverka_zagolovka(predmet, about):
             return 2
@@ -125,6 +126,7 @@ def dobavim():
             about = request.form.get('about')
             content = request.form.get('content')
             otvet = request.form.get('otvet')
+            top = list()
             if len(about) > 50:
                 return render_template("dobavlenie.html", form=form, gad=3)
             for i in content.split():
@@ -134,17 +136,24 @@ def dobavim():
                 return render_template("dobavlenie.html", form=form, gad=5)
             if form.fiz.data:
                 spi.append(obrabotka_zadach(form, "Физика", about, content, otvet))
+                top.append('/fizika')
             if form.math.data:
                 spi.append(obrabotka_zadach(form, "Математика", about, content, otvet))
+                top.append('/math')
             if form.informatick.data:
                 spi.append(obrabotka_zadach(form, "Информатика", about, content, otvet))
+                top.append('/inform')
             if form.news.data:
                 db_session.global_init("db/olymp.sqlite")
                 session = db_session.create_session()
                 zad = Jobs()
                 zad.about = about
                 zad.news = content
-                if form.photo.data != '':
+                print(form.photo.data)
+                print(repr(form.photo.data == ''))
+                if str(form.photo.data).split()[1] == "''":
+                    print(1)
+                if str(form.photo.data).split()[1] != "''":
                     if not str(form.photo.data).split()[1][1:-1].split('.')[1] in norm_rashir:
                         return render_template("dobavlenie.html", form=form, gad=0)
                     else:
@@ -157,15 +166,19 @@ def dobavim():
                         zad.image = nazv
                         session.add(zad)
                         session.commit()
+                        top.append('/news')
                 else:
                     session.add(zad)
                     session.commit()
+                    top.append('/news')
             if spi.count(0) > 0:
                 return render_template("dobavlenie.html", form=form, gad=0)
             elif spi.count(2) > 0:
                 return render_template("dobavlenie.html", form=form, gad=2)
             else:
-                return redirect('/news')
+                if len(top) == 0:
+                    return render_template("dobavlenie.html", form=form, gad=6)
+                return redirect(top[0])
         return render_template("dobavlenie.html", form=form, gad=1)
 
 
@@ -310,4 +323,4 @@ if __name__ == '__main__':
     app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
     db_session.global_init("db/olymp.sqlite")
     app.register_blueprint(news_api.blueprint)
-    app.run(host='127.0.0.1', port=8080)
+    app.run(host='0.0.0.0', port=8080)

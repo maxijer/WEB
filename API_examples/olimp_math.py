@@ -1,6 +1,6 @@
 import requests
 
-dost = requests.get("http://6231f063.ngrok.io/api/math").json()
+dost = requests.get("http://6231f063.ngrok.io/api/f").json()
 z = dost['all_zadach']
 vse = ['image', 'information', 'nazv', 'predmet', 'ssilka']
 for i in range(len(z)):
