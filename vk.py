@@ -33,9 +33,7 @@ def main():
                 vk.messages.send(user_id=event.obj.message['from_id'],
                                  message=f"{ot}",
                                  random_id=random.randint(0, 2 ** 64))
-            elif 'в задаче' in str(event.obj.message).lower():
-                pass
-            elif 'помоги мне' == str(event.obj.message).lower():
+            elif 'помоги мне' ==  str(event.obj.message['text']).lower():
                 vk.messages.send(user_id=event.obj.message['from_id'],
                                  message=f"Я могу показывать ответ на задачу для этого нужно написать:"
                                          f"покажи ответ на задачу задача по предмет",
